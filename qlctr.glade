@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.40.0 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkWindow" id="mainWindow">
+    <property name="can-focus">False</property>
+    <property name="default-width">200</property>
+    <property name="default-height">440</property>
+    <property name="resizable">False</property>
+    <child>
+      <object class="GtkBox" id="mainGrid">
+        <property name="homogeneous">True</property>
+        <property name="orientation">vertical</property>
+        <property name="margin-top">4</property>
+        <property name="margin-bottom">4</property>
+        <property name="margin-start">4</property>
+        <property name="margin-end">4</property>
+        <child>
+          <object class="GtkBox" id="row1">
+            <child>
+              <object class="GtkEntry" id="mainDisplay">
+              <property name="editable">True</property>
+              <property name="hexpand">True</property>
+              <property name="margin-top">4</property>
+              <property name="margin-bottom">4</property>
+              <property name="margin-start">4</property>
+              <property name="margin-end">4</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox" id="row2">
+              <property name="homogeneous">True</property>
+              <child>
+                <object class="GtkButton" id="clearAllButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">C/CE</property>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="offButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">OFF</property>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">&#x221A;</property>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">&#37;</property>
+                </object>
+              </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox" id="row3">
+              <property name="homogeneous">True</property>
+              <child>
+                <object class="GtkButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">MRC</property>                  
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">M-</property>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">M+</property>                  
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="divideButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">&#247;</property>                  
+                </object>
+              </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox" id="row4">
+              <property name="homogeneous">True</property>
+              <child>
+                <object class="GtkButton" id="sevenButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">7</property>   
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="eightButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">8</property>   
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="nineButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">9</property>   
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="multiplyButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">&#215;</property>   
+                </object>
+              </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox" id="row5">
+              <property name="homogeneous">True</property>
+              <child>
+                <object class="GtkButton" id="fourButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">4</property>  
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="fiveButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">5</property>  
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="sixButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">6</property>  
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="subtractButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">&#x2212;</property>  
+                </object>
+              </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox" id="row6">
+              <property name="homogeneous">True</property>
+              <child>
+                <object class="GtkButton" id="oneButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">1</property>  
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="twoButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">2</property>  
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="threeButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">3</property>  
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="addButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">&#43;</property>  
+                </object>
+              </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox" id="row7">
+              <property name="homogeneous">True</property>
+              <child>
+                <object class="GtkButton" id="zeroButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">0</property>  
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="decimalButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">&#x2022;</property>  
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="equalsButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label">&#x003D;</property>  
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton">
+                  <property name="label" translatable="yes">button</property>
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="margin-top">4</property>
+                  <property name="margin-bottom">4</property>
+                  <property name="margin-start">4</property>
+                  <property name="margin-end">4</property>
+                  <property name="label"></property>  
+                </object>
+              </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

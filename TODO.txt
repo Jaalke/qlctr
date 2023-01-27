@@ -1,0 +1,5 @@
+Click listeners in calcWindow just call functions in calcDisplay for now, which are public.
+This is dumb. Probably just bind the final functions as the listeners themselves, if possible.
+
+0.0005
+mag = -4
