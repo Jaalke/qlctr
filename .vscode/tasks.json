@@ -9,9 +9,9 @@
             "command": "echo Hello"
         },
         {
-            "label": "Build Project with G++",
+            "label": "Build Project with Clang++",
             "type": "shell",
-            "command": "g++ qlctr.cpp calcWindow.cpp calcDisplay.cpp -o qlctr `pkg-config --cflags --libs gtkmm-4.0` -std=c++20",
+            "command": "clang++ qlctr.cpp calcWindow.cpp calcDisplay.cpp -o qlctr `pkg-config --cflags --libs gtkmm-4.0` -std=c++20",
             "problemMatcher": [],
             "group": {
                 "kind": "build",

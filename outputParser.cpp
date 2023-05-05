@@ -56,8 +56,8 @@ std::string trailingZeroesToSpaces(std::string& input) {
 }
 
 int main() {
-    // int input{};
-    // while (std::cin >> input) {
-    //     std::cout << parseOutput(input) << '\n';
-    // }
+    int input{};
+    while (std::cin >> input) {
+        std::cout << parseOutput(input) << '\n';
+    }
 }

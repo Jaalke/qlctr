@@ -37,6 +37,8 @@ void calcDisplay::evaluate() {
         case ADD:
             operandOne += operandTwo; 
             break;
+        default:
+            return;
     }
     currentCycle = FIRST_OPERAND;
     operandTwo = 0;
@@ -73,7 +75,24 @@ void calcDisplay::clearAll() {
 }
 
 void calcDisplay::selectOperation(operation oper) {
-    if (currentCycle == SECOND_OPERAND) {
+    if (oper == ROOT) {
+        if (currentCycle == FIRST_OPERAND) {
+            operandOne = std::sqrt(operandOne);
+        } else {
+            operandTwo = std::sqrt(operandTwo);
+        }
+        updateDisplay();
+        return;
+    } else if (oper == PERCENT) {
+        if (currentCycle == FIRST_OPERAND) {
+            return;
+        } else {
+            operandTwo = (operandOne * (operandTwo / 100));
+            updateDisplay();
+            return;
+        }
+        return;
+    } else if (currentCycle == SECOND_OPERAND) {
         evaluate();
     } else {
         currentCycle = SECOND_OPERAND;
@@ -81,6 +100,31 @@ void calcDisplay::selectOperation(operation oper) {
         significantDigit = 1;
     }
     currentOperation = oper;
+}
+
+void calcDisplay::recallMemory() {
+    if (currentCycle == FIRST_OPERAND) {
+        operandOne = operandMemory;
+    } else {
+        operandTwo = operandMemory;
+    }
+    updateDisplay();
+}
+
+void calcDisplay::addToMemory(bool negative) {
+    if (negative) {
+        if (currentCycle == FIRST_OPERAND) {
+            operandMemory -= operandOne;
+        } else {
+            operandMemory -= operandTwo;
+        }
+    } else {
+        if (currentCycle == FIRST_OPERAND) {
+            operandMemory += operandOne;
+        } else {
+            operandMemory -= operandTwo;
+        }
+    }
 }
 
 calcDisplay::~calcDisplay() {

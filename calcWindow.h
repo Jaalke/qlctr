@@ -23,6 +23,11 @@ class calcWindow : public Gtk::Window {
     Gtk::Button* multiplyButton{nullptr};
     Gtk::Button* subtractButton{nullptr};
     Gtk::Button* addButton{nullptr};
+    Gtk::Button* rootButton{nullptr};
+    Gtk::Button* percentButton{nullptr};
+    Gtk::Button* memoryRecallButton{nullptr};
+    Gtk::Button* memorySubtractButton{nullptr};
+    Gtk::Button* memoryAddButton{nullptr};
     Gtk::Button* equalsButton{nullptr};
 protected:
     void onClickOffButton();
@@ -30,6 +35,8 @@ protected:
     void onClickDecimalButton();
     void onClickClearAllButton();
     void onClickOperationButton(operation oper);
+    void onClickMemoryRecallButton();
+    void onClickMemoryAddButton(bool negative = false);
     void onClickEqualsButton();
 
 public:

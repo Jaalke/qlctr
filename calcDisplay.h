@@ -16,7 +16,9 @@ enum operation {
     ADD,
     SUBTRACT,
     MULTIPLY,
-    DIVIDE
+    DIVIDE,
+    ROOT,
+    PERCENT
 };
 
 class calcDisplay : public Gtk::Entry {
@@ -24,6 +26,7 @@ class calcDisplay : public Gtk::Entry {
     Glib::RefPtr<Gtk::EntryBuffer> calcBuffer;
     long double operandOne{0};
     long double operandTwo{0};
+    long double operandMemory{0};
     bool inputtingDecimal{false};
     int significantDigit{1};
     cycle currentCycle;
@@ -38,6 +41,8 @@ public:
     void inputDecimal();
     void clearAll();
     void selectOperation(operation oper);
+    void recallMemory();
+    void addToMemory(bool negative = false);
 };
 
 #endif

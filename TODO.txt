@@ -1,5 +1,9 @@
 Click listeners in calcWindow just call functions in calcDisplay for now, which are public.
 This is dumb. Probably just bind the final functions as the listeners themselves, if possible.
+(Turns out it's not, at least afaik)
 
-0.0005
-mag = -4
+outputParser - attempt to build a simple conversion from floating point to string from scratch, 
+currently stuck in limbo. Supposed to be tailored to the calculator display - max digits,
+displaying larger/smaller numbers with exp notation etc. The C++ std includes a helpful module called
+'format' or some such that provides this functionality - sadly, the good people over at Apple Clang
+have not deemed it important enough to include in their compiler.

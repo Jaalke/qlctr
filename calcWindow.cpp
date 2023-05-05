@@ -26,6 +26,11 @@ mainDisplay{Gtk::Builder::get_widget_derived<calcDisplay>(refBuilder, "mainDispl
     multiplyButton = builder->get_widget<Gtk::Button>("multiplyButton");
     subtractButton = builder->get_widget<Gtk::Button>("subtractButton");
     addButton = builder->get_widget<Gtk::Button>("addButton");
+    rootButton = builder->get_widget<Gtk::Button>("rootButton");
+    percentButton = builder->get_widget<Gtk::Button>("percentButton");
+    memoryRecallButton = builder->get_widget<Gtk::Button>("memoryRecallButton");
+    memorySubtractButton = builder->get_widget<Gtk::Button>("memorySubtractButton");
+    memoryAddButton = builder->get_widget<Gtk::Button>("memoryAddButton");
     equalsButton = builder->get_widget<Gtk::Button>("equalsButton");
 
     // Attaching listeners to buttons:
@@ -48,8 +53,12 @@ mainDisplay{Gtk::Builder::get_widget_derived<calcDisplay>(refBuilder, "mainDispl
     multiplyButton->signal_clicked().connect(sigc::bind(sigc::mem_fun(*this, &calcWindow::onClickOperationButton), MULTIPLY));
     subtractButton->signal_clicked().connect(sigc::bind(sigc::mem_fun(*this, &calcWindow::onClickOperationButton), SUBTRACT));
     addButton->signal_clicked().connect(sigc::bind(sigc::mem_fun(*this, &calcWindow::onClickOperationButton), ADD));
+    rootButton->signal_clicked().connect(sigc::bind(sigc::mem_fun(*this, &calcWindow::onClickOperationButton), ROOT));
+    percentButton->signal_clicked().connect(sigc::bind(sigc::mem_fun(*this, &calcWindow::onClickOperationButton), PERCENT));
+    memoryRecallButton->signal_clicked().connect(sigc::mem_fun(*this, &calcWindow::onClickMemoryRecallButton));
+    memorySubtractButton->signal_clicked().connect(sigc::bind(sigc::mem_fun(*this, &calcWindow::onClickMemoryAddButton), true));
+    memoryAddButton->signal_clicked().connect(sigc::bind(sigc::mem_fun(*this, &calcWindow::onClickMemoryAddButton), false));
     equalsButton->signal_clicked().connect(sigc::mem_fun(*this, &calcWindow::onClickEqualsButton));
-
 }
 
 void calcWindow::onClickOffButton() {
@@ -70,6 +79,14 @@ void calcWindow::onClickClearAllButton() {
 
 void calcWindow::onClickOperationButton(operation oper) {
     mainDisplay->selectOperation(oper);
+}
+
+void calcWindow::onClickMemoryRecallButton() {
+    mainDisplay->recallMemory();
+}
+
+void calcWindow::onClickMemoryAddButton(bool negative) {
+    mainDisplay->addToMemory(negative);
 }
 
 void calcWindow::onClickEqualsButton() {
