@@ -1,3 +1,4 @@
+#include "outputParser.h"
 #include <iostream>
 #include <math.h>
 #include <string>
@@ -38,26 +39,31 @@ std::string parseOutput(long double input, int max_length = 8) {
     }
     
     return output;
-
 }
 
-std::string trailingZeroesToSpaces(std::string& input) {
+std::string trailingZeroesToSpaces(std::string input) {
+
+    if (input.length() == 1) {
+        return input;
+    }
 
     for (std::string::reverse_iterator it = input.rbegin(); it != input.rend(); it++) {
         if (*it == '0') {
             *it = ' ';
+        } else if (*it == '.') {
+            *it = ' ';
+            break;
         } else {
             break;
         }
     }
     
     return input;
-
 }
 
-int main() {
-    int input{};
-    while (std::cin >> input) {
-        std::cout << parseOutput(input) << '\n';
-    }
-}
+// int main() {
+//     int input{};
+//     while (std::cin >> input) {
+//         std::cout << parseOutput(input) << '\n';
+//     }
+// }

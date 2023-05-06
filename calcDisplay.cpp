@@ -1,3 +1,4 @@
+#include "outputParser.h"
 #include "calcDisplay.h"
 #include <iostream>
 #include <string>
@@ -10,16 +11,15 @@ mBuilder{refBuilder} {
     currentCycle = FIRST_OPERAND;
     
     //Setting the display to 0 at start
-    //to_string gives a lot of ugly zeroes with float values, to be fixed
     updateDisplay();
 
 }
 
 void calcDisplay::updateDisplay() {
     if (currentCycle == FIRST_OPERAND) {
-        calcBuffer->set_text(std::to_string(operandOne));
+        calcBuffer->set_text(trailingZeroesToSpaces(std::to_string(operandOne)));
     } else {
-        calcBuffer->set_text(std::to_string(operandTwo));
+        calcBuffer->set_text(trailingZeroesToSpaces(std::to_string(operandTwo)));
     }
 }
 
