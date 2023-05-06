@@ -6,7 +6,7 @@
     <property name="name">mainWindow</property>
     <property name="can-focus">False</property>
     <property name="default-width">200</property>
-    <property name="default-height">400</property>
+    <property name="default-height">440</property>
     <property name="resizable">False</property>
     <child>
       <object class="GtkBox" id="mainGrid">
@@ -20,13 +20,12 @@
           <object class="GtkBox" id="row1">
             <child>
               <object class="GtkEntry" id="mainDisplay">
-                <property name="name">mainDisplay</property>
-                <property name="editable">True</property>
-                <property name="hexpand">True</property>
-                <property name="margin-top">4</property>
-                <property name="margin-bottom">4</property>
-                <property name="margin-start">4</property>
-                <property name="margin-end">4</property>
+              <property name="editable">True</property>
+              <property name="hexpand">True</property>
+              <property name="margin-top">4</property>
+              <property name="margin-bottom">4</property>
+              <property name="margin-start">4</property>
+              <property name="margin-end">4</property>
               </object>
             </child>
           </object>
@@ -360,9 +359,8 @@
               </child>
               <child>
                 <object class="GtkButton">
-                  <property name="name">emptyButton</property>
                   <property name="label" translatable="yes">button</property>
-                  <property name="visible">True</property>
+                  <property name="visible">False</property>
                   <property name="can-focus">True</property>
                   <property name="margin-top">4</property>
                   <property name="margin-bottom">4</property>

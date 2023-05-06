@@ -6,6 +6,7 @@ namespace {
 
 calcWindow* mainWindow{nullptr};
 Gtk::Button* offButton{nullptr};
+Glib::RefPtr<Gdk::Display> mainDisplay;
 Glib::RefPtr<Gtk::Application> app;
 
 void onAppActivate() {
@@ -35,7 +36,9 @@ void onAppActivate() {
     // auto mainStyleContext = mainWindow->get_style_context();
     // auto offButtonStyleContext = offButton->get_style_context();
     // APPLYING STYLES
-    // mainStyleContext->add_provider(cssProvider, GTK_STYLE_PROVIDER_PRIORITY_USER);
+
+    mainDisplay = mainWindow->get_display();
+    Gtk::StyleContext::add_provider_for_display(mainDisplay, cssProvider, GTK_STYLE_PROVIDER_PRIORITY_USER);
 
     app->add_window(*mainWindow);
     mainWindow->show();
